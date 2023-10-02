@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+{% for post in posts %}
+    {{ post.id }}
+    {{ post.title }}
+    {{ post.content }}
+    {{ post.date_posted }}
+    {% empty %}
+    <p>Постов нет</p>
+{% endfor %}
+
+
+{% endblock content %}
